@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>modifiers </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+        .cav {
+            background-color: green;
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h1>my name is {{name}}</h1>
+    <button @click.ctrl="Me()"> Click here</button>
+    <a @click.prevent href="https://www.udemy.com/course/laravel-vuejs-restful-api-course/learn/lecture/18930168#overview">vue</a>
+</div>
+
+
+
+
+<script>
+    var app = new Vue({
+        el:'#app',
+        data: {
+            name: 'mahmoud kamal diab',
+        },
+
+        methods:{
+            Me(e){
+                console.log('hello world')
+            },
+
+
+        }
+    })
+</script>
+</body>
+</html>
+
+

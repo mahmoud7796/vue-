@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>if else </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+        .cav {
+            background-color: green;
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h1 v-if="name">my name is {{name}}</h1>
+    <h2 v-else-if="age">my age is {{age}}</h2>
+    <button @click="showName">Show {{name}}</button>
+</div>
+
+
+<script>
+    var app = new Vue({
+        el:'#app',
+        data: {
+            name: true,
+            age:24
+        },
+
+        methods:{
+            Me(e){
+                console.log('hello world')
+            },
+            showName(){
+                this.name = !this.name
+            }
+
+
+        }
+    })
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loop </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+        .cav {
+            background-color: green;
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h1 v-if="name">my name is {{name}}</h1>
+
+    <lo>
+        <li v-for="info in infos">{{info}}</li>
+    </lo>
+    <ul>
+        <li v-for="resume in resumes">{{resume.name}} | {{resume.address}} | {{resume.age}} |</li>
+    </ul>
+
+</div>
+
+
+<script>
+    var app = new Vue({
+        el:'#app',
+        data: {
+            names: 'Mahmoud Kamal Ail Diab',
+            infos: ['name', 'age', 'university','address'],
+            resumes: [
+                {name:'Mahmoud Diab', age:24, address:'assuit'},
+            ]
+
+        },
+
+        methods:{
+            Me(e){
+                console.log('hello world')
+            },
+        }
+    })
+</script>
+</body>
+</html>
+
+

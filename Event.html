@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+        .cav {
+            background-color: green;
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h1>my name is {{name}}</h1>
+<!--<div  class="cav" @mousemove="move()">
+    {{log.x}} , {{log.y}}
+</div>-->
+
+    <input type="text" @keyup="nameChange">
+
+</div>
+
+
+
+
+<script>
+    var app = new Vue({
+        el:'#app',
+        data: {
+            name: 'mahmoud kamal diab',
+            log: {
+                x:0,
+                y:0
+            },
+
+        },
+
+        methods:{
+            Me(e){
+                console.log()
+            },
+            move(e){
+                this.log.x = event.offsetX
+                this.log.y = event.offsetY
+            },
+            nameChange(e){
+               // console.log(e.target.value)
+                this.name = e.target.value
+            }
+
+        }
+    })
+</script>
+</body>
+</html>
+
+

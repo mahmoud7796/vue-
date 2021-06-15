@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Vue </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h1>My name is</h1>
+    <p>{{myAge(24)}}</p>
+    <h2 :class="color1">i'm data binding red color </h2>
+    <h3>i earn {{dollar}} $ per month</h3>
+    <button @dblclick="usd(10)">+1</button>
+    <button @click="usdM(1)">-1</button>
+</div>
+
+
+
+
+<script>
+    var app = new Vue({
+        el:'#app',
+        data: {
+            name: 'mahmoud kamal diab',
+            color1: 'red',
+            color2:'green',
+            dollar: 0,
+        },
+
+
+        methods:{
+            myAge(age){
+                return `${this.name} my age is ${age}`
+            },
+            usd(incre){
+                return this.dollar +=incre;
+            },
+            usdM(deincre){
+                return this.dollar -= deincre;
+            }
+
+        }
+    })
+</script>
+</body>
+</html>
+
+
